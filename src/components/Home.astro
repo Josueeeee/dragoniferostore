@@ -1,0 +1,116 @@
+---
+import Card from "./Card.astro";
+---
+
+<div
+  id="home"
+  class="flex flex-col sm:flex-row justify-center items-center p-4 background-img">
+  <img src="/public/store/pcs.png" alt="Imagen de ARCADEV" class="w-96" />
+  <section>
+    <h2
+      class="text-4xl text-[#FF007F] font-black drop-shadow-[0_0_10px_#FF007F]">
+      GRAGONIFEROS STORE
+    </h2>
+    <p class="text-[#03dac6] font-bold drop-shadow-[0_0_10px_#03dac6]">
+      Accesorios y más
+    </p>
+    <p class="mt-6 font-bold text-[#f5f5f5] drop-shadow-[0_0_5px_#ffffff]">
+      Tienda especializada en productos para PC.
+    </p>
+    <button
+      class="bg-[#ff4081] hover:bg-[#ff77a9] text-black px-4 py-2 rounded-full mt-4 transition-all duration-300 shadow-[0_0_20px_#ff4081] hover:shadow-[0_0_25px_#ff77a9]">
+      Ver Más
+    </button>
+  </section>
+</div>
+<h2 class="text-4xl text-white text-center">ENCUENTRAS</h2>
+<section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 p-4">
+  <div
+    class="bg-[#1b1b1b] text-white p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-[0_0_20px_#03dac6] text-center">
+    <img
+      src="/public/store/chasis.png"
+      alt="Chasis"
+      class="w-full h-48 object-contain mb-4"
+    />
+    <h3 class="text-lg font-bold text-[#03dac6]">CHASIS</h3>
+  </div>
+
+  <div
+    class="bg-[#1b1b1b] text-white p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-[0_0_20px_#03dac6] text-center">
+    <img
+      src="/public/store/fuentes-de-poder.png"
+      alt="Fuentes de poder"
+      class="w-full h-48 object-contain mb-4"
+    />
+    <h3 class="text-lg font-bold text-[#03dac6]">FUENTES DE PODER</h3>
+  </div>
+
+  <div
+    class="bg-[#1b1b1b] text-white p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-[0_0_20px_#03dac6] text-center">
+    <img
+      src="/public/store/monitores.png"
+      alt="Monitores"
+      class="w-full h-48 object-contain mb-4"
+    />
+    <h3 class="text-lg font-bold text-[#03dac6]">MONITORES</h3>
+  </div>
+
+  <div
+    class="bg-[#1b1b1b] text-white p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-[0_0_20px_#03dac6] text-center">
+    <img
+      src="/public/store/perifericos.png"
+      alt="Periféricos"
+      class="w-full h-48 object-contain mb-4"
+    />
+    <h3 class="text-lg font-bold text-[#03dac6]">PERIFÉRICOS</h3>
+  </div>
+
+  <div
+    class="bg-[#1b1b1b] text-white p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-[0_0_20px_#03dac6] text-center">
+    <img
+      src="/public/store/refrigeracion.png"
+      alt="Refrigeración"
+      class="w-full h-48 object-contain mb-4"
+    />
+    <h3 class="text-lg font-bold text-[#03dac6]">REFRIGERACIÓN</h3>
+  </div>
+
+  <div
+    class="bg-[#1b1b1b] text-white p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-[0_0_20px_#03dac6] text-center">
+    <img
+      src="/public/store/sillas-gaming.png"
+      alt="Sillas Gaming"
+      class="w-full h-48 object-contain mb-4"
+    />
+    <h3 class="text-lg font-bold text-[#03dac6]">SILLAS GAMING</h3>
+  </div>
+</section>
+
+<style>
+  .product-card:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  .product-card:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  button {
+    box-shadow:
+      0 0 10px #ff4081,
+      0 0 20px #ff4081,
+      0 0 40px #ff4081;
+  }
+
+  button:hover {
+    box-shadow:
+      0 0 20px #ff77a9,
+      0 0 30px #ff77a9,
+      0 0 60px #ff77a9;
+  }
+  .card:hover {
+    border-color: #03dac6;
+    box-shadow: 0 0 30px #03dac6;
+    transform: scale(1.05);
+  }
+</style>

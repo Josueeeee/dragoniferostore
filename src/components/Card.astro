@@ -1,0 +1,21 @@
+---
+interface Props {
+  title: string;
+  body: string;
+}
+
+const { title, body } = Astro.props;
+---
+
+<div
+  class="ancho-card rounded-xl bg-[#008080] text-white p-4 text-center text-balance shadow-[1px_10px_38px_1px_rgba(23,255,255,0.4)]">
+  <h2 class="text-4xl font-extrabold">{title}</h2>
+  <p>{body}</p>
+</div>
+
+<style>
+  .ancho-card {
+    width: 200px;
+    height: 120px;
+  }
+</style>

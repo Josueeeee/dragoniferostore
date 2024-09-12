@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import SectionContainer from "../components/SectionContainer.astro";
+import Home from "../components/Home.astro";
+import ProductServices from "../components/ProductServices.astro";
+import Portfiolio from "../components/Portfiolio.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="DRAGONIFEROSTORE">
+  <SectionContainer class="pt-4 pb-32">
+    <Home />
+  </SectionContainer>
+  <div class="space-y-24 pb-16" id="Products">
+    <SectionContainer>
+      <ProductServices />
+    </SectionContainer>
+  </div>
+  <div class="space-y-24 pb-16" id="portfolio">
+    <SectionContainer>
+      <Portfiolio />
+    </SectionContainer>
+  </div>
+  <div class="space-y-24" id="contact">
+    <SectionContainer>
+      <Contact />
+    </SectionContainer>
+  </div>
+  <Footer />
+</Layout>

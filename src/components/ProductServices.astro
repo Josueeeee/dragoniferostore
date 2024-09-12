@@ -1,0 +1,33 @@
+---
+import Products from "./Products.astro";
+---
+
+<section class="bg-[#1F1F1F] text-white p-6">
+  <div
+    class="flex flex-col sm:flex-row justify-center p-4 bg-gradient-to-r from-[#00D0F3] to-[#A7006F] text-white rounded-lg shadow-lg border-2 border-[#FF0072]">
+    <div class="relative w-full sm:w-1/2">
+      <img
+        src="/store/144.png"
+        alt="Imagen de ARCADEV"
+        class="w-60 sm:absolute bottom-4 shadow-2xl border-4"
+      />
+    </div>
+    <section class="">
+      <h2 class="text-4xl font-extrabold tracking-tight text-[#D9F4F6]">
+        ENCUENTRANOS EN
+      </h2>
+      <p class="text-lg font-semibold mt-2 text-[#E0E0E0]">
+        Nuestras redes sociales
+      </p>
+
+      <button
+        class="bg-[#00F6F6] px-6 py-3 rounded-full mt-4 text-black font-bold shadow-lg hover:bg-[#00D0D0] transition-colors">
+        Descubre
+      </button>
+    </section>
+  </div>
+  <section class="text-center mt-8">
+    <h2 class="text-[#00F6F6] font-bold text-2xl my-8">Productos</h2>
+    <Products />
+  </section>
+</section>

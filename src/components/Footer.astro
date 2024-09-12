@@ -1,0 +1,148 @@
+<style>
+  /* Estilos de enlaces del footer */
+  .footer-link {
+    color: #ffffff; /* Color de texto blanco */
+    transition: color 0.3s ease;
+  }
+
+  .footer-link:hover {
+    color: #f600dd; /* Azul brillante en hover */
+    text-shadow: 0 0 10px rgba(246, 0, 156, 0.8); /* Resplandor azul */
+  }
+
+  /* Contenedor del footer */
+  .footer-container {
+    background: linear-gradient(
+      135deg,
+      #9dff00,
+      #ff0099
+    ); /* Degradado azul a rosa */
+    border-top: 4px solid #ff0099; /* Borde rosa brillante */
+    box-shadow: 0 4px 12px rgba(255, 0, 153, 0.4); /* Sombra con el rosa predominante */
+    padding: 2rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer-container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 0, 153, 0.15),
+      transparent 70%
+    ); /* Resplandor rosa suave */
+    animation: pulse 8s infinite ease-in-out;
+    z-index: 0;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Iconos de redes sociales */
+  .social-icon {
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(238, 255, 0, 0.7)); /* Sombra azul */
+    z-index: 1;
+    position: relative;
+  }
+
+  .social-icon:hover {
+    transform: scale(1.15);
+    filter: drop-shadow(
+      0 0 15px rgb(255, 0, 34)
+    ); /* Sombra azul más intensa al hacer hover */
+  }
+
+  /* Texto del footer */
+  .footer-text {
+    color: #ffffff;
+    margin-top: 1rem;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    z-index: 1;
+  }
+
+  /* Botón con estilo fluorescente */
+  .footer-button {
+    background-color: #e703c5; /* Azul fluorescente */
+    color: #000000; /* Texto negro */
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    text-align: center;
+    display: inline-block;
+    transition:
+      background-color 0.3s ease,
+      transform 0.3s ease;
+    text-decoration: none;
+  }
+
+  .footer-button:hover {
+    background-color: #6fff00; /* Cambia a un azul más suave al hacer hover */
+    transform: scale(1.05);
+  }
+
+  /* Contenedor general */
+  .footer-container .container {
+    position: relative;
+    z-index: 1;
+  }
+</style>
+
+<footer class="footer-container py-6 mt-8">
+  <div class="container mx-auto text-center">
+    <div class="flex justify-center space-x-6">
+      <a href="https://facebook.com" class="footer-link">
+        <svg
+          class="social-icon w-10"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          fill="#ffffff">
+          <path
+            d="M504 256C504 119.4 394.6 10 256 10S8 119.4 8 256c0 127.6 94.2 233.6 215.4 249.6v-176.4h-64v-73.2h64v-56.4c0-63.7 37.4-98.7 92.4-98.7 26.6 0 54.8 4.7 54.8 4.7v60.2h-30.8c-30.4 0-39.8 18.9-39.8 38.4v45.4h67.2l-10.8 73.2h-56.4v176.4C409.8 489.6 504 383.6 504 256z"
+          ></path>
+        </svg>
+      </a>
+      <a href="https://instagram.com" class="footer-link">
+        <svg
+          class="social-icon w-10"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+          fill="#ffffff">
+          <path
+            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+          ></path>
+        </svg>
+      </a>
+      <a href="https://whatsapp.com" class="footer-link">
+        <svg
+          class="social-icon w-10"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+          fill="#ffffff">
+          <path
+            d="M416 232C416 131.3 334.7 50 234 50S52 131.3 52 232c0 63.5 32.7 124.1 86.5 159.4v-62.6c-14.2-10.1-25.4-24.4-31.7-40.5-7.8-21.4-8.8-43.2-8.8-63.4 0-27.7 5.1-54.5 15.5-80.4 6.2-14.7 14.5-28.5 24.8-41.5 5.5-6.4 11.8-12.4 18.3-18.2 6.1-5.7 12.8-10.8 19.9-15.3 17.4-12.7 37.6-19.7 58.2-19.7 23.4 0 44.8 8.7 61.1 23.5 16.5 14.8 29.5 34.1 35.6 56.5 9.8 35.1 5.8 72.8-12.6 103.6-7.1 14.2-15.8 27.7-25.5 40.1-14.6 18.4-31.2 34.6-49.9 49.1-17.9 13.9-37.8 24.7-58.5 34.5-19.2 8.8-39.2 14.2-59.7 15.8-12.7 1-25.4 0.5-37.9-1.7-15.4-2.7-30.7-8.4-43.4-16.2-12.8-7.8-24.1-17.7-34.2-29.5v64.3C64.1 356.5 0 299.6 0 232 0 116.3 116.3 0 234 0S416 116.3 416 232z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+    <p class="footer-text mt-4">
+      Coopirayt © Todos los derechos reservados 2024
+    </p>
+  </div>
+</footer>

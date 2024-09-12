@@ -1,0 +1,80 @@
+---
+import Header from "../components/Header.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header />
+    <slot />
+  </body>
+</html>
+<style is:global>
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+
+  html {
+    font-family: "Montserrat Variable", sans-serif;
+    background: #13151a;
+    background-size: 224px;
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  body {
+    scrollbar-width: thin; /* Para Firefox */
+    scrollbar-color: #03dac6 #1b1b1b; /* Color del scroll para Firefox */
+  }
+
+  /* Scrollbar para navegadores basados en WebKit */
+  ::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1b1b1b; /* Color de fondo del contenedor de la barra */
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #03dac6; /* Color del scroll */
+    border-radius: 10px; /* Hacer la barra redondeada */
+    border: 2px solid #1b1b1b; /* Bordes para darle un efecto de separación */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #ff4081; /* Cambio de color al pasar el mouse por encima */
+  }
+
+  /* Efecto de sombra alrededor del thumb */
+  ::-webkit-scrollbar-thumb:active {
+    background-color: #ff4081; /* Color al hacer clic */
+    box-shadow: 0 0 10px #ff4081;
+  }
+</style>

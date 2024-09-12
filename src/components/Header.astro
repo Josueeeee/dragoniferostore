@@ -1,0 +1,99 @@
+---
+
+---
+
+<header
+  class="text-[#ffffff] md:fixed top-0 z-10 md:flex items-center justify-center w-full mx-auto mt-2">
+  <div
+    class="container mx-auto flex justify-between items-center pl-10 pr-10 nave">
+    <img src="/img/logo.webp" class="w-20" alt="logotipo" />
+    <nav class="hidden md:flex space-x-4 justify-center text-center">
+      <a
+        href="/"
+        class="hover:bg-[#05d9e8] hover:text-white hover:rounded-full hover:shadow-[1px_10px_10px_#005678] px-5 py-2"
+        >Inicio</a
+      >
+      <a
+        href="#Products"
+        class="hover:bg-[#05d9e8] hover:text-white hover:rounded-full hover:shadow-[1px_10px_10px_#005678] px-5 py-2"
+        >Productos y servicios</a
+      >
+      <a
+        href="#portfolio"
+        class="hover:bg-[#05d9e8] hover:text-white hover:rounded-full hover:shadow-[1px_10px_10px_#005678] px-5 py-2"
+        >Portafolio</a
+      >
+      <a
+        href="#contact"
+        class="hover:bg-[#05d9e8] hover:text-white hover:rounded-full hover:shadow-[1px_10px_10px_#005678] px-5 py-2"
+        >Contáctanos</a
+      >
+    </nav>
+    <button class="md:hidden" id="menu-button">
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="md:hidden hidden">
+    <nav class="flex flex-col space-y-2 p-4 text-center">
+      <a
+        href="/"
+        class="hover:bg-[#05d9e8] hover:text-white hover:rounded-full hover:shadow-[1px_10px_10px_#005678] px-5 py-2"
+        >Inicio</a
+      >
+      <a
+        href="/about"
+        class="hover:bg-[#05d9e8] hover:text-white hover:rounded-full hover:shadow-[1px_10px_10px_#005678] px-5 py-2"
+        >Productos y servicios</a
+      >
+      <a
+        href="/contact"
+        class="hover:bg-[#05d9e8] hover:text-white hover:rounded-full hover:shadow-[1px_10px_10px_#005678] px-5 py-2"
+        >Portafilio</a
+      >
+      <a
+        href="/contact"
+        class="hover:bg-[#05d9e8] hover:text-white hover:rounded-full hover:shadow-[1px_10px_10px_#d1f7ff] px-5 py-2"
+        >Contáctanos</a
+      >
+    </nav>
+  </div>
+</header>
+<style>
+  @media (min-width: 768px) {
+    .nave {
+      animation: nav-shadown 1s linear both;
+      animation-timeline: scroll();
+      animation-range: 0 100px;
+    }
+
+    @keyframes nav-shadown {
+      to {
+        @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-black/50 ring-white/10  shadow-[1px_3px_10px_1px_rgba(0,0,0,0.4)];
+      }
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.getElementById(
+      "menu-button"
+    ) as HTMLButtonElement;
+    const mobileMenu = document.getElementById("mobile-menu") as HTMLDivElement;
+
+    menuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  });
+</script>
